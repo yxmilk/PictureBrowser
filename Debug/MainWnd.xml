@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="1200,800" mininfo="600,400" caption="0,0,0,32" sizebox="4,4,4,4"> <!-- 窗口的初始尺寸(宽800，高600)、窗口的最小尺寸(宽600，高400)、标题栏拖拽区域(高32)、可拖拽边框大小(这里添加sizebox后就可以拖拽边框调整大小了) -->
+    <VerticalLayout > <!-- 整个窗口的背景色 -->
+        <!-- 标题栏区 -->
+        <HorizontalLayout height="28" bkcolor="FFEBEBEB"> <!-- 标题栏背景色 bkcolor、bkcolor2、bkcolor3分别是渐变色的三个值--> 
+			<VerticalLayout width="50"/>        
+			<VerticalLayout width="350">
+				<Edit name="pathEdit" height="28" width="350" />
+			</VerticalLayout>
+			<VerticalLayout width="23">
+				<Button name="pathBtn" height="18" width="18" padding="5,5,0,0" normalimage=" file='SysBtn\PathNormal.png' " />
+			</VerticalLayout>
+			<VerticalLayout />
+            <VerticalLayout width="69"> <!-- 右边三个控件所占的宽度-->
+                <Button name="minBtn"   tooltip="最小化" float="true" pos="0,5,22,24"  width="23" normalimage=" file='SysBtn\MinNormal.png' " />
+                <Button name="maxBtn"   tooltip="最大化" float="true" pos="22,5,44,24" width="23" normalimage=" file='SysBtn\MaxNormal.png' " />
+                <Button name="closeBtn" tooltip="关闭"   float="true" pos="44,5,74,24" width="23" normalimage=" file='SysBtn\CloseNormal.png' " />
+            </VerticalLayout>      
+        </HorizontalLayout>
+        
+        <!--图片区 -->
+        <HorizontalLayout bkcolor="FFFFFFFF">
+			<VerticalLayout width="50"> 
+				<HorizontalLayout />
+				<Button name="preBtn" height="42" width="25" padding="10,0,0,0" tooltip="上一张"  normalimage=" file='SysBtn\PreNormal.png' " />
+				<HorizontalLayout />
+			</VerticalLayout>
+			
+			<Label name="labelImg"/>
+			
+			<VerticalLayout width="50">
+				<HorizontalLayout />
+				<Button name="nextBtn" height="42" width="25" padding="15,0,0,0" tooltip="下一张"  normalimage=" file='SysBtn\NextNormal.png' " />
+				<HorizontalLayout />
+			</VerticalLayout>
+		</HorizontalLayout>
+		
+    </VerticalLayout>
+</Window>
